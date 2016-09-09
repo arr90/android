@@ -1,7 +1,19 @@
 [
     {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
         "merged": "D:\\temp\\and_notas\\and_notas\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_note.xml",
         "source": "D:\\temp\\and_notas\\and_notas\\app\\src\\main\\res\\layout\\edit_note.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_note.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\edit_note.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\add_note.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\add_note.xml"
     },
     {
         "merged": "D:\\temp\\and_notas\\and_notas\\app\\build\\intermediates\\res\\merged\\debug\\layout\\add_note.xml",
@@ -10,6 +22,10 @@
     {
         "merged": "D:\\temp\\and_notas\\and_notas\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
         "source": "D:\\temp\\and_notas\\and_notas\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_item_list.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\note_item_list.xml"
     },
     {
         "merged": "D:\\temp\\and_notas\\and_notas\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_item_list.xml",

@@ -2,5 +2,9 @@
     {
         "merged": "D:\\temp\\and_notas\\and_notas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "D:\\temp\\and_notas\\and_notas\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     }
 ]
