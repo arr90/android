@@ -1,0 +1,81 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:2:1-29:12
+	xmlns:android
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:2:11-69
+	package
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:7:5-74
+MERGED from [com.android.support:support-v4:22.2.1] D:\temp\and_notas\and_notas\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:7:42-71
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:7:15-41
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+		INJECTED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml
+android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:9:5-116
+	android:maxSdkVersion
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:9:87-113
+	android:name
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:9:30-86
+android:uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:10:5-83
+	android:name
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:10:30-80
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:11:5-115
+	android:maxSdkVersion
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:11:86-112
+	android:name
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:11:30-85
+application
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:13:5-27:19
+MERGED from [com.android.support:support-v4:22.2.1] D:\temp\and_notas\and_notas\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:16:9-41
+	android:allowBackup
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:14:9-35
+	android:icon
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:15:9-45
+	android:theme
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:17:9-40
+activity#com.example.and_notas.activities.MainActivity
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:18:9-23:20
+	android:label
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:18:59-102
+	android:name
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:18:19-58
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:19:13-22:29
+action#android.intent.action.MAIN
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:21:27-74
+activity#com.example.and_notas.activities.AddNoteActivity
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:24:9-64
+	android:name
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:24:19-61
+activity#com.example.and_notas.activities.EditNoteActivity
+ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:25:9-26:20
+	android:label
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:25:63-111
+	android:name
+		ADDED from D:\temp\and_notas\and_notas\app\src\main\AndroidManifest.xml:25:19-62

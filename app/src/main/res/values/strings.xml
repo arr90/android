@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">and_notas</string>
+    <string name="title_activity_main">Notes</string>
+    <string name="add">Add</string>
+    <string name="no_notes">No notes</string>
+    <string name="write_a_note">Write a note</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity_edit_note">EditNoteActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
