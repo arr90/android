@@ -9,6 +9,7 @@ import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,7 +24,7 @@ import com.example.and_notas.dao.NoteDao;
 import com.example.and_notas.R;
 
 public class MainActivity extends ListActivity {
-	
+
 	private NoteDao dao;
 	ArrayAdapter<Note> arrayAdapter;
 	List<Note> notes;
@@ -34,29 +35,37 @@ public class MainActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
+
 		dao = new NoteDao(this);
 		dao.open();
+
 	}
-	
+
 	@Override
 	protected void onResume() {
 		dao.open();
 		super.onResume();
-		
+
 		notes = dao.getAll();
 
-		ListView lv = (ListView) findViewById(android.R.id.list);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.new_note);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,AddNoteActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-		arrayAdapter = new ArrayAdapter<Note>(this, android.R.layout.simple_list_item_1, notes);//simple_list_item_1 simple_list_item_multiple_choice
-		//noteItemListAdapter = new NoteAdapter(getApplicationContext());//TEMP
+		ListView listView = (ListView) findViewById(android.R.id.list);
+
+		arrayAdapter = new ArrayAdapter<Note>(this, android.R.layout.simple_list_item_1, notes);
 		setListAdapter(arrayAdapter);
 
+		listView.setAdapter(arrayAdapter);
 
-		//lv.setAdapter(noteItemListAdapter);//TEMP
-		lv.setAdapter(arrayAdapter);
-
-		lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+		listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 			public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
 				java.text.SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -81,7 +90,7 @@ public class MainActivity extends ListActivity {
 			}
 		});
 
-		lv.setOnItemClickListener(new OnItemClickListener() {
+		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> a, View v, int position, long id) {
 
 				AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
@@ -102,6 +111,7 @@ public class MainActivity extends ListActivity {
 				adb.show();
 			}
 		});
+
 	}
 
 	@Override

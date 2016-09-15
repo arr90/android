@@ -1,0 +1,6 @@
+CHANGED,C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\and_notas\activities\MainActivity$override.class
+CHANGED,C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\and_notas\activities\MainActivity$1$override.class
+CHANGED,C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\and_notas\activities\MainActivity$2$override.class
+CHANGED,C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\and_notas\activities\MainActivity$2$1$override.class
+CHANGED,C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\and_notas\activities\MainActivity$3$override.class

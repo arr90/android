@@ -1,33 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="19"
+    abi="armeabi-v7a,armeabi"
+    api-level="22"
     density="xhdpi"
     format="7"
-    timestamp="93570028738410"
-    token="-2306941378336819993" >
+    timestamp="111380656793329"
+    token="-2306941378336819993"
+    verifier="CLASS_ADDED" >
 
     <task
         name="javac"
-        duration="2736" />
+        duration="3224" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2994" />
+        duration="234" />
     <task
         name="verifier"
-        duration="3559" />
+        duration="32" />
 
     <artifact
-        location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+        type="DEX" />
 
-    <build timestamp="93570028738410" >
+    <build timestamp="106095733973911" >
         <artifact
             location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="110594527714606" >
+        <artifact
+            location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="111380656793329"
+        verifier="CLASS_ADDED" >
+        <artifact
+            location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

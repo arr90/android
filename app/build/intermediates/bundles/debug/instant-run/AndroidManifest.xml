@@ -5,17 +5,14 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="19"
         android:targetSdkVersion="22" />
 
-    <android:uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
+    <!--
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+    -->
     <application
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:allowBackup="true"
@@ -34,8 +31,7 @@
         <activity android:name="com.example.and_notas.activities.AddNoteActivity" />
         <activity
             android:name="com.example.and_notas.activities.EditNoteActivity"
-            android:label="@string/title_activity_edit_note" >
-        </activity>
+            android:label="@string/title_activity_edit_note" />
     </application>
 
 </manifest>

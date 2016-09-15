@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.and_notas"
-        minSdkVersion 11
+        minSdkVersion 19
         targetSdkVersion 22
     }
 
@@ -19,5 +19,7 @@ android {
 }
 
 dependencies {
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:design:22.2.0'
     compile 'com.android.support:support-v4:22.+'
 }
