@@ -27,7 +27,7 @@ public class MainActivity extends ListActivity {
 
 	private NoteDao dao;
 	ArrayAdapter<Note> arrayAdapter;
-    ada
+
 	List<Note> notes;
     private final String LOG_ARRAY_ADAPTER = ArrayAdapter.class.getSimpleName();
 
