@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".activities.AddNoteActivity"  android:label="@string/title_activity_add_note" />
         <activity android:name=".activities.EditNoteActivity" android:label="@string/title_activity_edit_note" />
+        <activity android:name=".activities.MaterialDesignLogInFormActivity" android:label="MaterialDesignLogInFormActivity"/>
     </application>
 
 </manifest>

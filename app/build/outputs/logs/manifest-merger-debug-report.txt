@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:2:1-31:12
 	xmlns:android
 		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:3:5-63
 	package
@@ -33,7 +33,7 @@ MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\an
 		INJECTED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:15:5-28:19
+ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:15:5-29:19
 MERGED from [com.android.support:appcompat-v7:22.2.0] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:22.2.0] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\AndroidManifest.xml:22:5-20
@@ -52,7 +52,7 @@ MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\an
 activity#com.example.and_notas.activities.MainActivity
 ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:20:9-25:20
 	android:label
-		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:20:59-102
+		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:20:59-91
 	android:name
 		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:20:19-58
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
@@ -66,7 +66,9 @@ ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:23
 	android:name
 		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:23:27-74
 activity#com.example.and_notas.activities.AddNoteActivity
-ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:26:9-64
+ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:26:9-113
+	android:label
+		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:26:63-110
 	android:name
 		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:26:19-61
 activity#com.example.and_notas.activities.EditNoteActivity
@@ -75,3 +77,9 @@ ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:27
 		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:27:63-111
 	android:name
 		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:27:19-62
+activity#com.example.and_notas.activities.MaterialDesignLogInFormActivity
+ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:28:9-127
+	android:label
+		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:28:78-125
+	android:name
+		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:28:19-77

@@ -1,7 +1,6 @@
 package com.example.and_notas.activities;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.List;
 
 import android.app.AlertDialog;
@@ -10,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,7 +27,9 @@ public class MainActivity extends ListActivity {
 
 	private NoteDao dao;
 	ArrayAdapter<Note> arrayAdapter;
+    ada
 	List<Note> notes;
+    private final String LOG_ARRAY_ADAPTER = ArrayAdapter.class.getSimpleName();
 
 	NoteItemListAdapter noteItemListAdapter;
 
@@ -35,7 +37,6 @@ public class MainActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-
 		dao = new NoteDao(this);
 		dao.open();
 
@@ -52,7 +53,7 @@ public class MainActivity extends ListActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,AddNoteActivity.class);
+                Intent intent = new Intent(MainActivity.this, AddNoteActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -61,6 +62,7 @@ public class MainActivity extends ListActivity {
 		ListView listView = (ListView) findViewById(android.R.id.list);
 
 		arrayAdapter = new ArrayAdapter<Note>(this, android.R.layout.simple_list_item_1, notes);
+        Log.i(LOG_ARRAY_ADAPTER, "init adapter");
 		setListAdapter(arrayAdapter);
 
 		listView.setAdapter(arrayAdapter);

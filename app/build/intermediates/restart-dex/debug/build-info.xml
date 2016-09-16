@@ -4,46 +4,43 @@
     api-level="22"
     density="xhdpi"
     format="7"
-    timestamp="111380656793329"
+    timestamp="194389675636624"
     token="-2306941378336819993"
-    verifier="CLASS_ADDED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="3224" />
+        duration="654" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="808" />
     <task
         name="instant-run-transform"
-        duration="234" />
+        duration="117" />
     <task
         name="verifier"
-        duration="32" />
+        duration="10" />
 
     <artifact
-        location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
-        type="DEX" />
+        location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="106095733973911" >
+    <build timestamp="193244928161099" >
         <artifact
             location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="110594527714606" >
-        <artifact
-            location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="111380656793329"
-        verifier="CLASS_ADDED" >
+    <build timestamp="193824907280708" >
         <artifact
             location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="194389675636624"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

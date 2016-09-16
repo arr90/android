@@ -1,11 +1,15 @@
 [
     {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\drawable\\abc_cab_background_top_material.xml"
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\user_profile_image_background.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\drawable\\user_profile_image_background.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",

@@ -1,7 +1,9 @@
 package com.example.and_notas.activities;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -22,16 +24,17 @@ public class AddNoteActivity extends ListActivity {
 		dao = new NoteDao(this);
 		dao.open();
 		
-		
-		Button saveButton 		= (Button) 	 findViewById(R.id.save_note_button);
+		FloatingActionButton saveFAButton = (FloatingActionButton) findViewById(R.id.save_note_button);
 		final EditText noteText = (EditText) findViewById(R.id.note_text);
 		
-		saveButton.setOnClickListener(new OnClickListener() {
+		saveFAButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String note = noteText.getEditableText().toString();
 				dao.create(note);
 				finish();
+				Intent intent = new Intent(AddNoteActivity.this, MainActivity.class);
+				startActivity(intent);
 			}
 		});
 	}

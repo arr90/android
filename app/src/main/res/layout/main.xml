@@ -11,11 +11,11 @@
     tools:context=".activities.MainActivity"
     >
 
-
 	<ListView
 		android:id="@android:id/list"
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
+		android:choiceMode="multipleChoice"
 	 />
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 		android:text="@string/no_notes"
-        />
+	/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/new_note"
