@@ -72,12 +72,16 @@
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
-    },
-    {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ab_solid_shadow_holo_flipped.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.jmedeisis\\draglinearlayout\\1.1.0\\res\\drawable\\ab_solid_shadow_holo_flipped.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",

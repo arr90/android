@@ -4,43 +4,40 @@
     api-level="22"
     density="xhdpi"
     format="7"
-    timestamp="194389675636624"
-    token="-2306941378336819993"
-    verifier="COMPATIBLE" >
+    timestamp="459755717048694"
+    token="-2306941378336819993" >
 
     <task
         name="javac"
-        duration="654" />
+        duration="0" />
     <task
         name="instant-run-dex"
-        duration="808" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="117" />
+        duration="0" />
     <task
         name="verifier"
-        duration="10" />
+        duration="0" />
 
     <artifact
-        location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="193244928161099" >
+    <build timestamp="456262630860940" >
         <artifact
             location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="193824907280708" >
+    <build timestamp="459139022076021" >
         <artifact
             location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
             type="DEX" />
     </build>
-    <build
-        timestamp="194389675636624"
-        verifier="COMPATIBLE" >
+    <build timestamp="459755717048694" >
         <artifact
-            location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
+            location="C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

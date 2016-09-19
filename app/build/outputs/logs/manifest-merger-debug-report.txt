@@ -24,6 +24,8 @@ MERGED from [com.android.support:appcompat-v7:22.2.0] C:\DESENVOLVIMENTO\GITHUB\
 MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.jmedeisis:draglinearlayout:1.1.0] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.jmedeisis\draglinearlayout\1.1.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:9:42-71
 		INJECTED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml
@@ -40,6 +42,8 @@ MERGED from [com.android.support:design:22.2.0] C:\DESENVOLVIMENTO\GITHUB\androi
 MERGED from [com.android.support:appcompat-v7:22.2.0] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.jmedeisis:draglinearlayout:1.1.0] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.jmedeisis\draglinearlayout\1.1.0\AndroidManifest.xml:11:5-47
 MERGED from [com.android.support:support-v4:22.2.1] C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\DESENVOLVIMENTO\GITHUB\android\app\src\main\AndroidManifest.xml:18:9-41

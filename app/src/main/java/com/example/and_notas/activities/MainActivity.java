@@ -16,12 +16,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
 
 import com.example.and_notas.adapter.NoteItemListAdapter;
 import com.example.and_notas.vo.Note;
 import com.example.and_notas.dao.NoteDao;
 import com.example.and_notas.R;
+import com.jmedeisis.draglinearlayout.DragLinearLayout;
 
 public class MainActivity extends ListActivity {
 
@@ -49,6 +52,12 @@ public class MainActivity extends ListActivity {
 
 		notes = dao.getAll();
 
+        DragLinearLayout dragDropAndroidLinearLayout = (DragLinearLayout) findViewById(R.id.drag_drop_layout);
+        for (int i = 0; i < dragDropAndroidLinearLayout.getChildCount(); i++) {
+            View child = dragDropAndroidLinearLayout.getChildAt(i);
+            dragDropAndroidLinearLayout.setViewDraggable(child, child);
+        }
+
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.new_note);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +69,6 @@ public class MainActivity extends ListActivity {
         });
 
 		ListView listView = (ListView) findViewById(android.R.id.list);
-
 		arrayAdapter = new ArrayAdapter<Note>(this, android.R.layout.simple_list_item_1, notes);
         Log.i(LOG_ARRAY_ADAPTER, "init adapter");
 		setListAdapter(arrayAdapter);

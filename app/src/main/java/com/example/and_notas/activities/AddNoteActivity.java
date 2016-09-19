@@ -32,7 +32,6 @@ public class AddNoteActivity extends ListActivity {
 			public void onClick(View v) {
 				String note = noteText.getEditableText().toString();
 				dao.create(note);
-				finish();
 				Intent intent = new Intent(AddNoteActivity.this, MainActivity.class);
 				startActivity(intent);
 			}

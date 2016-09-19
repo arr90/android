@@ -41,7 +41,7 @@
         android:gravity="end"
         android:hint="@string/save"
 
-        android:src="@drawable/fab_save"
+        android:src="@drawable/fab_plus"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
     />
