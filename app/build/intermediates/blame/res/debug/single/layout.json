@@ -16,28 +16,28 @@
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_note.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\edit_note.xml"
-    },
-    {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_lines.xml"
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_note.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\edit_note.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_simple_dropdown_hint.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_simple_dropdown_hint.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\layout\\design_navigation_menu.xml"
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_lines.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\layout\\design_navigation_menu.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
@@ -56,24 +56,24 @@
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_expanded_menu_layout.xml"
-    },
-    {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tool_bar.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\tool_bar.xml"
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_screen_content_include.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_screen_content_include.xml"
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tool_bar.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\tool_bar.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
@@ -100,20 +100,20 @@
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\add_note.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\add_note.xml"
-    },
-    {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_part_time.xml"
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\add_note.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\add_note.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
@@ -124,24 +124,24 @@
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_part_chronometer.xml"
-    },
-    {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_big_media_narrow.xml"
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar.xml",
@@ -164,24 +164,24 @@
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_item_list.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\note_item_list.xml"
-    },
-    {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_item_list.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\note_item_list.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\material_design_login_form.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\src\\main\\res\\layout\\material_design_login_form.xml"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",

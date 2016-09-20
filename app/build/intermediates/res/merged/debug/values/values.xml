@@ -11,8 +11,9 @@
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
-    <color name="ColorPrimary">#FF5722</color>
-    <color name="ColorPrimaryDark">#E64A19</color>
+    <color name="ColorPrimary">#E64A19</color>
+    <color name="ColorPrimaryDark">#d20b0d</color>
+    <color name="ColorPrimaryLight">#FF5722</color>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -54,8 +55,6 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
-    <color name="primary">#d20b0d</color>
-    <color name="primary_dark">#8a0a0c</color>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
     <color name="primary_material_dark">#ff212121</color>
@@ -275,8 +274,8 @@
         -->
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/ColorPrimary</item>
-        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryLight</item>
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">

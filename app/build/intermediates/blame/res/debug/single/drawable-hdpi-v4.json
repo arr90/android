@@ -60,12 +60,12 @@
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\drawable-hdpi\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ab_solid_shadow_holo.9.png",
-        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.jmedeisis\\draglinearlayout\\1.1.0\\res\\drawable-hdpi\\ab_solid_shadow_holo.9.png"
-    },
-    {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png",
         "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\drawable-hdpi\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ab_solid_shadow_holo.9.png",
+        "source": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\exploded-aar\\com.jmedeisis\\draglinearlayout\\1.1.0\\res\\drawable-hdpi\\ab_solid_shadow_holo.9.png"
     },
     {
         "merged": "C:\\DESENVOLVIMENTO\\GITHUB\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
