@@ -16,34 +16,45 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.ExpandableListAdapter;
-import android.widget.ExpandableListView;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.and_notas.R;
 import com.example.and_notas.adapter.NoteItemListAdapter;
 import com.example.and_notas.vo.Note;
 import com.example.and_notas.dao.NoteDao;
-import com.example.and_notas.R;
-import com.jmedeisis.draglinearlayout.DragLinearLayout;
 
 public class MainActivity extends ListActivity {
 
 	private NoteDao dao;
-	ArrayAdapter<Note> arrayAdapter;
+    List<Note> notes;
 
-	List<Note> notes;
+    NoteItemListAdapter noteItemListAdapter;
+
     private final String LOG_ARRAY_ADAPTER = ArrayAdapter.class.getSimpleName();
 
-	NoteItemListAdapter noteItemListAdapter;
-
 	@Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+		setContentView(R.layout.main);
+
+        dao = new NoteDao(this);
+        dao.open();
+
+        notes = dao.getAll();
+
+        NoteItemListAdapter adapter = new NoteItemListAdapter(this, notes);
+        setListAdapter(adapter);
+    }
+
+/*
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		dao = new NoteDao(this);
 		dao.open();
-
 	}
+*/
 
 	@Override
 	protected void onResume() {
@@ -52,28 +63,19 @@ public class MainActivity extends ListActivity {
 
 		notes = dao.getAll();
 
-        DragLinearLayout dragDropAndroidLinearLayout = (DragLinearLayout) findViewById(R.id.drag_drop_layout);
-        for (int i = 0; i < dragDropAndroidLinearLayout.getChildCount(); i++) {
-            View child = dragDropAndroidLinearLayout.getChildAt(i);
-            dragDropAndroidLinearLayout.setViewDraggable(child, child);
-        }
-
-        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.new_note);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AddNoteActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        createDragToNoteList();
 
 		ListView listView = (ListView) findViewById(android.R.id.list);
-		arrayAdapter = new ArrayAdapter<Note>(this, android.R.layout.simple_list_item_1, notes);
+		noteItemListAdapter = new NoteItemListAdapter(this, notes);
         Log.i(LOG_ARRAY_ADAPTER, "init adapter");
-		setListAdapter(arrayAdapter);
 
-		listView.setAdapter(arrayAdapter);
+		setListAdapter(noteItemListAdapter);
+
+		listView.setAdapter(noteItemListAdapter);
+
+		getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+
+//        createFABaddNote();
 
 		listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 			public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -91,7 +93,7 @@ public class MainActivity extends ListActivity {
 					public void onClick(DialogInterface dialog, int which) {
 						dao.delete(notes.get(positionToRemove));
 						notes.remove(positionToRemove);
-						arrayAdapter.notifyDataSetChanged();
+						noteItemListAdapter.notifyDataSetChanged();
 					}
 				});
 
@@ -123,8 +125,29 @@ public class MainActivity extends ListActivity {
 		});
 
 	}
-
-	@Override
+/*
+    private void createDragToNoteList() {
+        DragLinearLayout dragDropAndroidLinearLayout = (DragLinearLayout) findViewById(R.id.drag_drop_layout);
+        for (int i = 0; i < dragDropAndroidLinearLayout.getChildCount(); i++) {
+            View child = dragDropAndroidLinearLayout.getChildAt(i);
+            dragDropAndroidLinearLayout.setViewDraggable(child, child);
+        }
+    }
+*/
+	/*
+    private void createFABaddNote() {
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.new_note);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddNoteActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+	*/
+    @Override
 	protected void onPause() {
 		dao.close();
 		super.onPause();
@@ -137,12 +160,18 @@ public class MainActivity extends ListActivity {
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
+	/*public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.add_note) {
 			Intent intent = new Intent(this, AddNoteActivity.class);
 			startActivity(intent);
 		}
 		return super.onOptionsItemSelected(item);
+	}*/
+	public boolean onOptionsItemSelected(MenuItem item) {
+		Toast.makeText(this, String.valueOf(getListView().getCheckedItemCount()), Toast.LENGTH_LONG).show();
+		return true;
 	}
+
+
 
 }
