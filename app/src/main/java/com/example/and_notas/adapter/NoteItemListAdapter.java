@@ -7,12 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.and_notas.R;
 import com.example.and_notas.activities.MainActivity;
+import com.example.and_notas.dao.NoteDao;
 import com.example.and_notas.viewHolder.NoteHolder;
 import com.example.and_notas.vo.Note;
 
@@ -33,6 +35,7 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> {
     private Context context;
     private int layoutResourceId;
     private List<Note> notes;
+    private NoteDao dao;
 
 /*
     public NoteItemListAdapter(Context context, int layoutResourceId,List<Note> notes) {
@@ -52,19 +55,40 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> {
 
     @SuppressLint("WrongViewCast")
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-
+    public View getView(final int position, View convertView, ViewGroup parent) {
+        View view = convertView;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View rowView = inflater.inflate(R.layout.note_item_list, parent, false);
+        view = inflater.inflate(R.layout.note_item_list, parent, false);
 
-        TextView textView = (TextView) rowView.findViewById(R.id.note_text);
+        TextView textView = (TextView) view.findViewById(R.id.note_text);
         textView.setText(notes.get(position).getNote().toString());
 
-//        textView.setText("teste do bondão");
+        Button buttonDelete = (Button) view.findViewById(R.id.bt_delete);
 
-        return rowView;
+//        System.out.println(android.R.id.bt_delete);
+
+        buttonDelete.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                //TODO implements dao remove note
+                /*
+                dao = new NoteDao(this);
+                dao.open();
+
+                notes = dao.getAll();
+                */
+                notes.remove(position);
+                notifyDataSetChanged();
+            }
+        });
+
+        return view;
     }
+
+
+
 /*
     public View getView(int position, View convertView, ViewGroup parent) {
 

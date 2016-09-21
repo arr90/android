@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -75,7 +76,30 @@ public class MainActivity extends ListActivity {
 
 		getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-//        createFABaddNote();
+        createFABaddNote();
+
+
+		listView.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+
+				AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+				adb.setTitle("Edit?");
+				adb.setMessage("Are you sure you want to edit this item [" + position + "] ?");
+
+				final int positionToEdit = position;
+				adb.setNegativeButton("Cancel", null);
+				adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+
+						Intent intent = new Intent(MainActivity.this, EditNoteActivity.class);
+						intent.putExtra("noteForEdit", notes.get(positionToEdit));
+
+						startActivity(intent);
+					}
+				});
+				adb.show();
+			}
+		});
 
 		listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 			public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -102,28 +126,6 @@ public class MainActivity extends ListActivity {
 			}
 		});
 
-		listView.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> a, View v, int position, long id) {
-
-				AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
-				adb.setTitle("Edit?");
-				adb.setMessage("Are you sure you want to edit this item [" + position + "] ?");
-
-				final int positionToEdit = position;
-				adb.setNegativeButton("Cancel", null);
-				adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
-					public void onClick(DialogInterface dialog, int which) {
-
-						Intent intent = new Intent(MainActivity.this, EditNoteActivity.class);
-						intent.putExtra("noteForEdit", notes.get(positionToEdit));
-
-						startActivity(intent);
-					}
-				});
-				adb.show();
-			}
-		});
-
 	}
 /*
     private void createDragToNoteList() {
@@ -134,7 +136,6 @@ public class MainActivity extends ListActivity {
         }
     }
 */
-	/*
     private void createFABaddNote() {
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.new_note);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -146,7 +147,6 @@ public class MainActivity extends ListActivity {
             }
         });
     }
-	*/
     @Override
 	protected void onPause() {
 		dao.close();
