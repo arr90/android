@@ -37,26 +37,23 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> {
     private List<Note> notes;
     private NoteDao dao;
 
-/*
     public NoteItemListAdapter(Context context, int layoutResourceId,List<Note> notes) {
         super(context, layoutResourceId,notes);
         this.context = context;
         this.layoutResourceId = layoutResourceId;
         this.notes = notes;
     }
-*/
 
     public NoteItemListAdapter(Context context, List<Note> notes) {
         super(context, R.layout.note_item_list, notes);
         this.context = context;
-        this.layoutResourceId = layoutResourceId;
         this.notes = notes;
     }
 
     @SuppressLint("WrongViewCast")
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
-        View view = convertView;
+    public View getView(final int position, View view, ViewGroup parent) {
+
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         view = inflater.inflate(R.layout.note_item_list, parent, false);
@@ -65,55 +62,21 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> {
         textView.setText(notes.get(position).getNote().toString());
 
         Button buttonDelete = (Button) view.findViewById(R.id.bt_delete);
-
-//        System.out.println(android.R.id.bt_delete);
-
         buttonDelete.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
                 //TODO implements dao remove note
-                /*
-                dao = new NoteDao(this);
+                dao = new NoteDao(context);
                 dao.open();
+                dao.delete(notes.get(position));
 
-                notes = dao.getAll();
-                */
                 notes.remove(position);
                 notifyDataSetChanged();
             }
         });
 
         return view;
-    }
-
-
-
-/*
-    public View getView(int position, View convertView, ViewGroup parent) {
-
-        View row = convertView;
-        NoteHolder holder;
-
-        LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-        row = inflater.inflate(layoutResourceId,parent,false);
-
-        holder = new NoteHolder();
-        holder.note = notes.get(position);
-        holder.bt_delete = (ImageButton) row.findViewById(R.id.bt_delete);
-        holder.bt_delete.setTag(holder.note);
-
-        holder.note_text = (TextView) row.findViewById(R.id.note_text);
-
-        row.setTag(holder);
-
-        setupItem(holder);
-        return row;
-    }
-*/
-
-    private void setupItem(NoteHolder holder) {
-        holder.note_text.setText(holder.note.getNote());
     }
 
 }

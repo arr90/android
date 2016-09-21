@@ -1,8 +1,21 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <item
         android:id="@+id/add_note"
         android:title="@string/add"
     />
+    <item
+        app:showAsAction="always"
+        android:id="@+id/action_refresh"
+        android:orderInCategory="100"
+        android:icon="@drawable/abc_spinner_mtrl_am_alpha"
+        android:title="Refresh"/>
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings">
+    </item>
 
 </menu>

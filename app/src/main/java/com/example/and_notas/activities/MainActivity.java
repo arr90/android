@@ -48,15 +48,6 @@ public class MainActivity extends ListActivity {
         setListAdapter(adapter);
     }
 
-/*
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
-		dao = new NoteDao(this);
-		dao.open();
-	}
-*/
-
 	@Override
 	protected void onResume() {
 		dao.open();

@@ -16,7 +16,6 @@
 		android:title="@string/app_name"
 	/>
 
-
 	<ListView
 		android:id="@android:id/list"
 		android:paddingTop="58dp"
@@ -31,6 +30,7 @@
         android:layout_height="wrap_content"
 		android:paddingTop="58dp"
 		android:text="@string/no_notes"
+		android:fontFamily="serif"
 	/>
 
     <android.support.design.widget.FloatingActionButton
@@ -46,6 +46,5 @@
         app:fabSize="normal"
         app:pressedTranslationZ="12dp"
     />
-	<!--
-    -->
+
 </RelativeLayout>
