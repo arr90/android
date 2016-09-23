@@ -3,7 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/ColorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/app_name"
+        app:collapseIcon="@drawable/ic_launcher"
+        />
 
     <TextView
         android:id="@+id/contact_form_title"
@@ -11,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="All Notes"
         android:textColor="#ce3232"
         android:textSize="40sp"
@@ -35,16 +45,16 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/save_note_button"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:background="@color/light_black"
         android:gravity="end"
-        android:hint="@string/save"
-
         android:src="@drawable/fab_plus"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-    />
+        app:elevation="16dp"
+        app:borderWidth="8dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        />
 
 <!--
 <android.support.design.widget.FloatingActionButton

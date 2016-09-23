@@ -13,7 +13,7 @@
 		android:layout_height="58dp"
 		android:background="@color/ColorPrimary"
 		android:minHeight="?attr/actionBarSize"
-		android:title="@string/app_name"
+		app:title="@string/app_name"
 	/>
 
 	<ListView
@@ -21,8 +21,7 @@
 		android:paddingTop="58dp"
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
-		android:choiceMode="multipleChoice"
-	 />
+	/>
 
     <TextView
         android:id="@android:id/empty"
