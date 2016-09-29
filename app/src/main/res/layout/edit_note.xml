@@ -12,13 +12,15 @@
         android:background="@color/ColorPrimary"
         android:minHeight="?attr/actionBarSize"
         app:title="@string/app_name"
-        app:collapseIcon="@drawable/ic_launcher"
+
+        style="@style/custom_toolbar"
         />
 
     <EditText
         android:id="@+id/edit_note_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/ColorPrimaryDark"
         android:inputType="textMultiLine"
         />
 

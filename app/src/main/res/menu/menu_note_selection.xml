@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+    <item
+        android:id="@+id/ns_share"
+        android:icon="@drawable/abc_ic_menu_share_mtrl_alpha"
+        android:title="Share"
+    />
+
+    <item
+        android:id="@+id/ns_copy"
+        android:icon="@drawable/abc_ic_menu_copy_mtrl_am_alpha"
+        android:title="Delete"
+
+    />
+
+    <item
+        android:id="@+id/ns_delete"
+        android:icon="@drawable/abc_ic_clear_mtrl_alpha"
+        android:title="Delete"
+    />
+
+</menu>

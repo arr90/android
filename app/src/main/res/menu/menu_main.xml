@@ -4,18 +4,21 @@
     >
 
     <item
-        android:id="@+id/add_note"
+        android:id="@+id/action_add_note"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        app:showAsAction="ifRoom"
         android:title="@string/add"
+        />
+    <item
+        android:id="@+id/action_refresh"
+        app:showAsAction="always"
+        android:icon="@drawable/abc_spinner_mtrl_am_alpha"
+        android:title="Refresh"
     />
     <item
-        app:showAsAction="always"
-        android:id="@+id/action_refresh"
-        android:orderInCategory="100"
-        android:icon="@drawable/abc_spinner_mtrl_am_alpha"
-        android:title="Refresh"/>
-    <item
-        android:id="@+id/action_settings"
-        android:title="Settings">
-    </item>
+        android:id="@+id/action_delete"
+        android:icon="@drawable/abc_ic_clear_mtrl_alpha"
+        android:title="Delete"
+    />
 
 </menu>

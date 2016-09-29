@@ -5,6 +5,8 @@
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
+        <item name="android:textColorPrimary">@color/link_text_material_dark</item>
+        <item name="android:textColor">#ff0</item>
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -16,7 +18,43 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/ColorPrimary</item> <!-- window mode -->
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+
+        <!--<item name="android:textColorPrimary">#fff</item> &lt;!&ndash; font color toolbar &ndash;&gt;
+        <item name="android:textColor">@color/light_black</item> &lt;!&ndash; font color notes &ndash;&gt;-->
+
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="custom_toolbar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/light_black</item>
+        <item name="android:textColorPrimary">#ff0</item>
+        <item name="android:textColor">@color/link_text_material_dark</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+        <item name="android:textColorPrimary">@android:color/holo_blue_light</item>
+        <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+        <item name="actionMenuTextColor">@android:color/holo_green_light</item>
+        <!-- Tints the input fields like checkboxes and text fields -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Applies to views in their normal state. -->
+        <item name="colorControlNormal">@color/link_text_material_dark</item>
+        <!-- Applies to views in their activated state (i.e checked or switches) -->
+        <item name="colorControlActivated">@color/ripple_material_light</item>
+        <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
+        <item name="colorControlHighlight">#00f</item>
+
+        <!-- Enable these below if you want clicking icons to trigger a ripple effect -->
+        <!--
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+        -->
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textStyle">italic</item>
     </style>
 
 </resources>

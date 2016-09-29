@@ -5,8 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity"
-    >
+>
 
+	<include
+		layout="@layout/toolbar_main"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+	/>
+
+<!--
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="58dp"
+		android:minHeight="?attr/actionBarSize"
+		app:title="@string/app_name"
+
+
+	/>
+-->
+	<!--style="@style/custom_toolbar"-->
+<!--
 	<android.support.v7.widget.Toolbar
 		android:id="@+id/toolbar"
 		android:layout_width="match_parent"
@@ -14,13 +33,17 @@
 		android:background="@color/ColorPrimary"
 		android:minHeight="?attr/actionBarSize"
 		app:title="@string/app_name"
+
+		app:theme="@style/custom_toolbar"
 	/>
+-->
 
 	<ListView
 		android:id="@android:id/list"
 		android:paddingTop="58dp"
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
+		android:choiceMode="multipleChoice"
 	/>
 
     <TextView
@@ -29,6 +52,7 @@
         android:layout_height="wrap_content"
 		android:paddingTop="58dp"
 		android:text="@string/no_notes"
+		android:textSize="10dp"
 		android:fontFamily="serif"
 	/>
 
