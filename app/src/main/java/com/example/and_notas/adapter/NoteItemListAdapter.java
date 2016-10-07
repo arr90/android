@@ -3,6 +3,7 @@ package com.example.and_notas.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
@@ -94,7 +95,7 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
                 }
 //                selectedItem = position;
                 //TODO change backgroundColor when clicked
-                view.setBackgroundColor(view.getResources().getColor(R.color.light_black));
+
                 if (notes.get(position) != null) {
                     view.setBackgroundColor(view.getResources().getColor(R.color.ColorPrimary));// this is a selected position so make it red
                 }
@@ -109,6 +110,10 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
 //                mActionMode = NoteItemListAdapter.this.startActionMode(NoteItemListAdapter.this);
                 mActionMode = ((Activity)context).startActionMode(NoteItemListAdapter.this);
                 view.setSelected(true);
+
+                view.setBackgroundResource(R.color.zblue);
+//                view.setBackgroundColor(view.getResources().getColor(R.color.zpink));
+                view.setDrawingCacheBackgroundColor(view.getResources().getColor(R.color.zyellow));
 
                 return true;
             }
