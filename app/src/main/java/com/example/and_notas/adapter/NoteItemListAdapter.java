@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -76,10 +77,6 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
         TextView textView = (TextView) view.findViewById(R.id.note_text);
         textView.setText(notes.get(position).getNote().toString());
 
-        if (mSelection.get(position) != null) {
-            System.out.print("****************************** mSelection.get(position) != null *******************************-");
-        }
-
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,20 +100,37 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
                     view.setBackgroundResource(R.color.zgreen);
                 }
 
+                view.setBackgroundColor(context.getResources().getColor(R.color.zyellow));
+                if (mSelection.get(position) != null) {
+                    view.setBackgroundColor(context.getResources().getColor(R.color.zblue));
+                }
+
                 // Start the CAB using the ActionMode.Callback defined above
 //                mActionMode = NoteItemListAdapter.this.startActionMode(NoteItemListAdapter.this);
                 mActionMode = ((Activity)context).startActionMode(NoteItemListAdapter.this);
-                view.setSelected(true);
+/**/
+                if (mActionMode != null) {
+//                    view.setBackgroundColor(Color.TRANSPARENT);
+                    view.setBackgroundColor(Color.GREEN);
+//                    mActionMode.finish();
+                    return true;
+                }else {
+//                    mActionMode = NoteItemListAdapter.this.startActionMode(NoteItemListAdapter.this);
+                    mActionMode = ((Activity)context).startActionMode(NoteItemListAdapter.this);
+                    view.setSelected(true);
+                    view.setBackgroundColor(Color.parseColor("#b8dbd3"));
+                    view.setSelected(true);
+                    return false;
+                }
+/**/
 
-                return true;
+
+
             }
         });
 
-
-
         ImageButton btDelete = (ImageButton) view.findViewById(R.id.bt_delete);
         btDelete.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View view) {
                 dao = new NoteDao(context);
@@ -179,8 +193,6 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
 
     private HashMap<Integer, Boolean> mSelection = new HashMap<Integer, Boolean>();
 
-
-
     public void setNewSelection(int position, boolean value) {
         mSelection.put(position, value);
         notifyDataSetChanged();
@@ -204,55 +216,5 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
         mSelection = new HashMap<Integer, Boolean>();
         notifyDataSetChanged();
     }
-    /*public void clearSelection2() {
-        getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        getListView().setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
-
-            private int nr = 0;
-
-            @Override
-            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-                return false;
-            }
-
-            @Override
-            public void onDestroyActionMode(ActionMode mode) {
-                noteItemListAdapter.clearSelection();
-            }
-
-            @Override
-            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-                nr = 0;
-                MenuInflater inflater = getMenuInflater();
-                inflater.inflate(R.menu.menu_edit_note, menu);
-                return true;
-            }
-
-            @Override
-            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_delete:
-                        nr = 0;
-                        noteItemListAdapter.clearSelection();
-                        mode.finish();
-                }
-                return false;
-            }
-
-            @Override
-            public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
-                if (checked) {
-                    nr++;
-                    noteItemListAdapter.setNewSelection(position, checked);
-                } else {
-                    nr--;
-                    noteItemListAdapter.removeSelection(position);
-                }
-                mode.setTitle(nr + " selected");
-
-            }
-        });
-    }*/
-
 
 }

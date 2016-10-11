@@ -51,7 +51,7 @@ public class MainActivity extends ListActivity {
         noteItemListAdapter = new NoteItemListAdapter(this, notes);
         setListAdapter(noteItemListAdapter);
 
-        /*
+        /**/
         getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         getListView().setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
 
@@ -91,6 +91,7 @@ public class MainActivity extends ListActivity {
                 if (checked) {
                     nr++;
                     noteItemListAdapter.setNewSelection(position, checked);
+                    getListView().setBackgroundResource(R.color.zgreen);
                 } else {
                     nr--;
                     noteItemListAdapter.removeSelection(position);
@@ -99,18 +100,18 @@ public class MainActivity extends ListActivity {
 
             }
         });
-        */
+        /**/
         createFABaddNote();
         initToolBar();
     }
-
+/*
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         //TEMP
         super.onPostCreate(savedInstanceState);
         getActionBar().setSubtitle("Long press to start selection");
     }
-
+*/
 	@Override
 	protected void onResume() {
 		dao.open();
@@ -161,6 +162,8 @@ public class MainActivity extends ListActivity {
 		*/
         return true;
 	}
+
+
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -218,4 +221,5 @@ public class MainActivity extends ListActivity {
         });
 
     }
+
 }
