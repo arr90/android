@@ -3,6 +3,8 @@
     <color name="ColorPrimary">#E64A19</color>
     <color name="ColorPrimaryLight">#FF5722</color>
     <color name="ColorPrimaryDark">#d20b0d</color>
+
+    <color name="zteste">#ddd</color>
     <!--
     <color name="primary">#FF5722</color>
     -->
@@ -20,4 +22,6 @@
     <color name="zacqua">#0ff</color>
     <color name="zpink">#f0f</color>
     <color name="zyellow">#ff0</color>
+
+    <color name="zlima">#df9</color>
 </resources>

@@ -26,7 +26,7 @@
     </style>
 
     <style name="custom_toolbar" parent="@style/Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/light_black</item>
+        <item name="android:background">@color/zlima</item>
         <item name="android:textColorPrimary">#ff0</item>
         <item name="android:textColor">@color/link_text_material_dark</item>
     </style>

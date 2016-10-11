@@ -36,6 +36,7 @@ public class AddNoteActivity extends ListActivity {
 				dao.create(note);
 				Intent intent = new Intent(AddNoteActivity.this, MainActivity.class);
 				startActivity(intent);
+				finish();//TODO 11/10/16
 			}
 		});
 	}

@@ -3,7 +3,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
-    android:background="@color/zgreen"
+    android:elevation="2dp"
+    android:layout_margin="1dp"
     >
 
     <TextView

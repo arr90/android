@@ -51,8 +51,8 @@ public class MainActivity extends ListActivity {
         noteItemListAdapter = new NoteItemListAdapter(this, notes);
         setListAdapter(noteItemListAdapter);
 
-        getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         /*
+        getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         getListView().setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
 
             private int nr = 0;
@@ -101,7 +101,14 @@ public class MainActivity extends ListActivity {
         });
         */
         createFABaddNote();
-//        initToolBar();
+        initToolBar();
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        //TEMP
+        super.onPostCreate(savedInstanceState);
+        getActionBar().setSubtitle("Long press to start selection");
     }
 
 	@Override

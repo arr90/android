@@ -11,9 +11,8 @@
         android:layout_height="58dp"
         android:background="@color/ColorPrimary"
         android:minHeight="?attr/actionBarSize"
-        app:title="@string/app_name"
-
-        style="@style/custom_toolbar"
+        app:title="EDIT NOTE"
+        app:backgroundTint="@color/white"
         />
 
     <EditText

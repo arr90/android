@@ -32,7 +32,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="Search"
-            android:textAllCaps="true"
+            android:textAllCaps="false"
             />
 
     </RelativeLayout>

@@ -47,6 +47,9 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
     protected Object mActionMode;
     public int selectedItem = -1;
 
+    public NoteItemListAdapter(Context context, int resource, int textViewResourceId, List<Note> notes) {
+        super(context, R.layout.note_item_list, notes);
+    }
 
     public NoteItemListAdapter(Context context, int layoutResourceId,List<Note> notes) {
         super(context, layoutResourceId,notes);
@@ -61,17 +64,18 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
         this.notes = notes;
     }
 
-
     @Override
     public View getView(final int position, View view, ViewGroup parent) {
+
         Log.i(LOG_NOTE_LIST_ADAPTER, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG *************************************************************");
+
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
         view = inflater.inflate(R.layout.note_item_list, parent, false);
 
         TextView textView = (TextView) view.findViewById(R.id.note_text);
         textView.setText(notes.get(position).getNote().toString());
 
-        //            view.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));// this is a selected position so make it red
         if (mSelection.get(position) != null) {
             System.out.print("****************************** mSelection.get(position) != null *******************************-");
         }
@@ -93,31 +97,22 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
                 if (mActionMode != null) {
                     return false;
                 }
-//                selectedItem = position;
-                //TODO change backgroundColor when clicked
 
                 if (notes.get(position) != null) {
-                    view.setBackgroundColor(view.getResources().getColor(R.color.ColorPrimary));// this is a selected position so make it red
+//                    view.setBackgroundColor(Color.BLACK); //default color
+                    view.setBackgroundResource(R.color.zgreen);
                 }
-/*
-                view.setBackgroundColor(getResources().getColor(android.R.color.background_light)); //default color
-                if (mSelection.get(position) != null) {
-                    view.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));// this is a selected position so make it red
-                }
-*/
 
                 // Start the CAB using the ActionMode.Callback defined above
 //                mActionMode = NoteItemListAdapter.this.startActionMode(NoteItemListAdapter.this);
                 mActionMode = ((Activity)context).startActionMode(NoteItemListAdapter.this);
                 view.setSelected(true);
 
-                view.setBackgroundResource(R.color.zblue);
-//                view.setBackgroundColor(view.getResources().getColor(R.color.zpink));
-                view.setDrawingCacheBackgroundColor(view.getResources().getColor(R.color.zyellow));
-
                 return true;
             }
         });
+
+
 
         ImageButton btDelete = (ImageButton) view.findViewById(R.id.bt_delete);
         btDelete.setOnClickListener(new View.OnClickListener(){
@@ -150,7 +145,7 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
     @Override
     public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
         Log.i(LOG_NOTE_LIST_ADAPTER, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG *************************************************************");
-        mode.setTitle("#");
+        mode.setTitle("Click to select");
         return false;
     }
 
@@ -184,9 +179,7 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
 
     private HashMap<Integer, Boolean> mSelection = new HashMap<Integer, Boolean>();
 
-    public NoteItemListAdapter(Context context, int resource, int textViewResourceId, List<Note> notes) {
-        super(context, R.layout.note_item_list, notes);
-    }
+
 
     public void setNewSelection(int position, boolean value) {
         mSelection.put(position, value);
@@ -211,5 +204,55 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
         mSelection = new HashMap<Integer, Boolean>();
         notifyDataSetChanged();
     }
+    /*public void clearSelection2() {
+        getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        getListView().setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
+
+            private int nr = 0;
+
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                return false;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                noteItemListAdapter.clearSelection();
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                nr = 0;
+                MenuInflater inflater = getMenuInflater();
+                inflater.inflate(R.menu.menu_edit_note, menu);
+                return true;
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_delete:
+                        nr = 0;
+                        noteItemListAdapter.clearSelection();
+                        mode.finish();
+                }
+                return false;
+            }
+
+            @Override
+            public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
+                if (checked) {
+                    nr++;
+                    noteItemListAdapter.setNewSelection(position, checked);
+                } else {
+                    nr--;
+                    noteItemListAdapter.removeSelection(position);
+                }
+                mode.setTitle(nr + " selected");
+
+            }
+        });
+    }*/
+
 
 }

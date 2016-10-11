@@ -12,7 +12,7 @@
     <item
         android:id="@+id/ns_copy"
         android:icon="@drawable/abc_ic_menu_copy_mtrl_am_alpha"
-        android:title="Delete"
+        android:title="Copy"
 
     />
 

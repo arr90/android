@@ -13,31 +13,6 @@
 		android:layout_height="wrap_content"
 	/>
 
-<!--
-	<android.support.v7.widget.Toolbar
-		android:id="@+id/toolbar"
-		android:layout_width="match_parent"
-		android:layout_height="58dp"
-		android:minHeight="?attr/actionBarSize"
-		app:title="@string/app_name"
-
-
-	/>
--->
-	<!--style="@style/custom_toolbar"-->
-<!--
-	<android.support.v7.widget.Toolbar
-		android:id="@+id/toolbar"
-		android:layout_width="match_parent"
-		android:layout_height="58dp"
-		android:background="@color/ColorPrimary"
-		android:minHeight="?attr/actionBarSize"
-		app:title="@string/app_name"
-
-		app:theme="@style/custom_toolbar"
-	/>
--->
-
 	<ListView
 		android:id="@android:id/list"
 		android:paddingTop="58dp"
@@ -57,17 +32,30 @@
 	/>
 
     <android.support.design.widget.FloatingActionButton
-		android:id="@+id/new_note"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:id="@+id/new_note"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/fab_plus"
+
+        app:backgroundTint="@color/ColorPrimaryLight"
+        app:rippleColor="@color/ColorPrimaryDark"
+        app:borderWidth="0dp"
+
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:src="@drawable/fab_plus"
-        app:backgroundTint="@color/ColorPrimaryDark"
-        app:elevation="16dp"
-        app:borderWidth="8dp"
+
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+
+        android:clickable="true"
+        android:elevation="0dp"
+        />
+    <!--
         app:fabSize="normal"
-        app:pressedTranslationZ="12dp"
-    />
+        android:background="@drawable/circle"
+
+        android:paddingRight="64dp"
+        android:paddingBottom="64dp"
+    -->
 
 </RelativeLayout>
