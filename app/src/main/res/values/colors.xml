@@ -3,8 +3,12 @@
     <color name="ColorPrimary">#E64A19</color>
     <color name="ColorPrimaryLight">#FF5722</color>
     <color name="ColorPrimaryDark">#d20b0d</color>
+    <color name="ColorPrimarySweet">#fdd</color>
 
-    <color name="zteste">#ddd</color>
+    <color name="pressed_color">#fdd</color>
+    <color name="default_color">#f0dd0d</color>
+
+    <color name="zgray">#ddd</color>
     <!--
     <color name="primary">#FF5722</color>
     -->

@@ -30,6 +30,5 @@ public class Note implements Serializable{
 	public String toString() {
 		return note;
 	}
-	
-	
+
 }

@@ -51,88 +51,20 @@ public class MainActivity extends ListActivity {
         noteItemListAdapter = new NoteItemListAdapter(this, notes);
         setListAdapter(noteItemListAdapter);
 
-        /**/
-        getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        getListView().setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
-
-            private int nr = 0;
-
-            @Override
-            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-                return false;
-            }
-
-            @Override
-            public void onDestroyActionMode(ActionMode mode) {
-                noteItemListAdapter.clearSelection();
-            }
-
-            @Override
-            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-                nr = 0;
-                MenuInflater inflater = getMenuInflater();
-                inflater.inflate(R.menu.menu_edit_note, menu);
-                return true;
-            }
-
-            @Override
-            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_delete:
-                        nr = 0;
-                        noteItemListAdapter.clearSelection();
-                        mode.finish();
-                }
-                return false;
-            }
-
-            @Override
-            public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
-                if (checked) {
-                    nr++;
-                    noteItemListAdapter.setNewSelection(position, checked);
-                    getListView().setBackgroundResource(R.color.zgreen);
-                } else {
-                    nr--;
-                    noteItemListAdapter.removeSelection(position);
-                }
-                mode.setTitle(nr + " selected");
-
-            }
-        });
-        /**/
         createFABaddNote();
         initToolBar();
     }
-/*
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        //TEMP
-        super.onPostCreate(savedInstanceState);
-        getActionBar().setSubtitle("Long press to start selection");
-    }
-*/
+
 	@Override
 	protected void onResume() {
 		dao.open();
 		super.onResume();
-
-/*
-        notes = dao.getAll();
-		noteItemListAdapter = new NoteItemListAdapter(this, notes);
-        setListAdapter(noteItemListAdapter);
-
-        Log.i(LOG_ARRAY_ADAPTER, "init adapter LOG *************************************************************");
-
-        ListView listView = (ListView) findViewById(android.R.id.list);
-        listView.setAdapter(noteItemListAdapter);
-*/
-//        createFABaddNote();
 	}
 
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+        Log.i(LOG_ARRAY_ADAPTER, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
 /*
         Toolbar toolbarMain = (Toolbar) findViewById(R.id.toolbar_main);
 		toolbarMain.inflateMenu(R.menu.menu_main);
@@ -162,8 +94,6 @@ public class MainActivity extends ListActivity {
 		*/
         return true;
 	}
-
-
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -202,8 +132,6 @@ public class MainActivity extends ListActivity {
     public void initToolBar(){
         toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setActionBar(toolbar);
-
-
 
         toolbar.setOnClickListener(new View.OnClickListener(){
             @Override

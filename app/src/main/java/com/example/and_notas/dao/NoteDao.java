@@ -9,12 +9,14 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.and_notas.CustomSQLiteOpenHelper;
 import com.example.and_notas.vo.Note;
 
 public class NoteDao {
-	
+
+	private static final String LOG_NOTE_LIST_ADAPTER = NoteDao.class.getSimpleName();
 	private SQLiteDatabase database;
 	private String[] columns = { CustomSQLiteOpenHelper.COLUMN_ID, CustomSQLiteOpenHelper.COLUMN_NOTES, CustomSQLiteOpenHelper.COLUMN_CREATE_DATE };
 	private CustomSQLiteOpenHelper sqliteOpenHelper;
@@ -52,6 +54,7 @@ public class NoteDao {
 	public void delete(Note note) {
 		String where = CustomSQLiteOpenHelper.COLUMN_ID + " = " + note.getId();
 		database.delete(CustomSQLiteOpenHelper.TABLE_NOTES, where, null);
+		Log.i(LOG_NOTE_LIST_ADAPTER, "DELETE NOTE - id: "+ note.getId() +" ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
 	}
 
 	public void edit(Note note) {

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
->
+    >
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -14,20 +14,7 @@
         app:title="ADD NOTE"
         style="@style/custom_toolbar"
         />
-<!--
-    <TextView
-        android:id="@+id/contact_form_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="10dp"
-        android:text="All Notes"
-        android:textColor="#ce3232"
-        android:textSize="40sp"
-        android:typeface="serif"
-    />
--->
+
     <EditText
         android:id="@+id/note_text"
         android:layout_height="wrap_content"
@@ -55,10 +42,10 @@
         app:pressedTranslationZ="12dp"
         />
 
-
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         />
+
 </LinearLayout>
