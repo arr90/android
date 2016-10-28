@@ -30,4 +30,16 @@
         android:hint="Edit"
         />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_note_button2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/fab_save"
+        android:layout_gravity="center"
+
+        app:backgroundTint="@color/ColorPrimary"
+        app:borderWidth="0dp"
+        app:pressedTranslationZ="12dp"
+        />
+
 </LinearLayout>

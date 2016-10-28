@@ -1,21 +1,13 @@
 package com.example.and_notas.activities;
 
-import android.app.ActionBar;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
-import android.view.ActionMode;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -37,7 +29,7 @@ public class MainActivity extends ListActivity {
     protected Object mActionMode;
     public int selectedItem = -1;
 
-    private final String LOG_ARRAY_ADAPTER = ArrayAdapter.class.getSimpleName();
+    private final String LOG_MAIN_ACTIVITY = MainActivity.class.getSimpleName();
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,8 +56,17 @@ public class MainActivity extends ListActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-        Log.i(LOG_ARRAY_ADAPTER, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+        Log.i(LOG_MAIN_ACTIVITY, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
 /*
+        TextView textView = (TextView) findViewById(R.id.toolbar_text_search);
+        textView.setOnClickListener(new TextView.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Log.i(LOG_MAIN_ACTIVITY, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+                Toast.makeText(MainActivity.this, "text view clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         Toolbar toolbarMain = (Toolbar) findViewById(R.id.toolbar_main);
 		toolbarMain.inflateMenu(R.menu.menu_main);
 
@@ -73,6 +74,7 @@ public class MainActivity extends ListActivity {
         textView.setOnClickListener(new TextView.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Log.i(LOG_MAIN_ACTIVITY, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
                 Toast.makeText(MainActivity.this, "text view clicked", Toast.LENGTH_SHORT).show();
             }
         });
@@ -90,7 +92,6 @@ public class MainActivity extends ListActivity {
 						return onOptionsItemSelected(item);
 					}
 				});
-
 		*/
         return true;
 	}
@@ -136,6 +137,7 @@ public class MainActivity extends ListActivity {
         toolbar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Log.i(this.getClass().getSimpleName(), "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
                 Toast.makeText(MainActivity.this, "clicking the toolbar!", Toast.LENGTH_SHORT).show();
             }
         });

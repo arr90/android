@@ -34,7 +34,7 @@
         android:id="@+id/save_note_button"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/fab_save"
+        android:src="@drawable/abc_btn_check_to_on_mtrl_015"
         android:layout_gravity="center"
 
         app:backgroundTint="@color/ColorPrimary"

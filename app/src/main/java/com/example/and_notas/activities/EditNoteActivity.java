@@ -3,6 +3,7 @@ package com.example.and_notas.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,6 +38,7 @@ public class EditNoteActivity extends Activity {
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(this.getClass().getSimpleName(), "onClick ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
                 //TODO
                 String noteEdited = editNoteText.getEditableText().toString();
 

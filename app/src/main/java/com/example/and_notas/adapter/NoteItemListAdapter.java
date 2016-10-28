@@ -5,6 +5,7 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.ActionMode;
@@ -18,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.and_notas.R;
 import com.example.and_notas.activities.EditNoteActivity;
@@ -41,7 +43,7 @@ import java.util.Set;
  */
 public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMode.Callback {
 
-    private static final String LOG_NOTE_LIST_ADAPTER = NoteItemListAdapter.class.getSimpleName();
+//    private static final String LOG_NOTE_LIST_ADAPTER = NoteItemListAdapter.class.getSimpleName();
     private Context context;
     private int layoutResourceId;
     private List<Note> notes;
@@ -73,18 +75,20 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
 
     @Override
     public View getView(final int position, View view, ViewGroup parent) {
-        Log.i(LOG_NOTE_LIST_ADAPTER, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+        Log.i(this.getClass().getSimpleName(), "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(R.layout.note_item_list, parent, false);
 
         TextView textView = (TextView) view.findViewById(R.id.note_text);
-        textView.setText(notes.get(position).getNote().toString());/*limit character in exhibition*/
+        textView.setText(notes.get(position).getNote().toString());/*limit character in exhibition 200?*/
 
         //add on click listener to start edit mode
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.i(this.getClass().getSimpleName(), "onClick ["+Thread.currentThread().getStackTrace()[1].getMethodName()+"] LOG **********");
+
                 if(mActionMode == null) {// no items selected, so perform item click actions
                     Intent intent = new Intent(context,EditNoteActivity.class);
                     intent.putExtra("noteForEdit", notes.get(position));
@@ -99,10 +103,8 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
         view.setOnLongClickListener(new View.OnLongClickListener(){
             @Override
             public boolean onLongClick(View view) {
-                Log.i(LOG_NOTE_LIST_ADAPTER, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
-//                return onListItemCheck(view,position);
-                onListItemCheck(view,position);
-                return true;
+                Log.i(this.getClass().getSimpleName(), "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+                return onListItemCheck(view,position);
             }
         });
 
@@ -110,6 +112,8 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
         btDelete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                Log.i(this.getClass().getSimpleName(), "btDelete ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+
                 dao = new NoteDao(context);
                 dao.open();
                 dao.delete(notes.get(position));
@@ -119,21 +123,28 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
             }
         });
 
-        //change background color if list item is selected
+        /**change background color if list item is selected**/
         view.setBackgroundColor(mSelectedItemsIds.get(position) ? context.getResources().getColor(R.color.ColorPrimarySweet) : Color.TRANSPARENT);
 
         return view;
     }
 
     private boolean onListItemCheck(View view, int position) {
+        Log.i(this.getClass().getSimpleName(), "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
 
         toggleSelection(position);
         boolean hasCheckedItems = getSelectedCount() > 0;
 
         if (hasCheckedItems && mActionMode == null) {
             mActionMode = ((Activity)context).startActionMode(NoteItemListAdapter.this);// there are some selected items, start the actionMode
+            //TODO HIDE TOOLBAR
+            ((Activity)context).getActionBar().hide();
         } else if (!hasCheckedItems && mActionMode != null) {
             mActionMode.finish();// there no selected items, finish the actionMode
+            //TODO SHOW TOOLBAR
+//            Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar_main);
+//            ActionBar actionBar = view.findViewById(R.id.toolbar_main);
+            ((Activity)context).getActionBar().show();
         }
 
         if(mActionMode != null) {
@@ -170,21 +181,21 @@ public class NoteItemListAdapter extends ArrayAdapter<Note> implements ActionMod
     /***ACTION MODE****/
     @Override
     public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-        Log.i(LOG_NOTE_LIST_ADAPTER, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+        Log.i(this.getClass().getSimpleName(), "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
         mode.getMenuInflater().inflate(R.menu.menu_note_selection,menu);
         return true;
     }
 
     @Override
     public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-        Log.i(LOG_NOTE_LIST_ADAPTER, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+        Log.i(this.getClass().getSimpleName(), "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
         mode.setTitle("Click to select");
         return false;
     }
 
     @Override
     public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-        Log.i(LOG_NOTE_LIST_ADAPTER, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+        Log.i(this.getClass().getSimpleName(), "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
 
         SparseBooleanArray selected = getSelectedIds();
 
