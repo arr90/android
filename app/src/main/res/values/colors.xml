@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ColorPrimary">#FF5722</color>
-    <color name="ColorPrimaryDark">#E64A19</color>
-    <color name="primary">#d20b0d</color>
-    <color name="primary_dark">#8a0a0c</color>
+    <color name="ColorPrimary">#E64A19</color>
+    <color name="ColorPrimaryLight">#FF5722</color>
+    <color name="ColorPrimaryDark">#d20b0d</color>
+    <color name="ColorPrimarySweet">#fdd</color>
+
+    <color name="pressed_color">#fdd</color>
+    <color name="default_color">#f0dd0d</color>
+
+    <color name="zgray">#ddd</color>
+    <!--
+    <color name="primary">#FF5722</color>
+    -->
+    <color name="zvine">#8a0a0c</color>
+
     <color name="colorAccent">#FF4081</color>
     <color name="light_black">#504f4f</color>
     <color name="black">#000</color>
     <color name="white">#fff</color>
+
+    <color name="zred">#f00</color>
+    <color name="zgreen">#0f0</color>
+    <color name="zblue">#00f</color>
+
+    <color name="zacqua">#0ff</color>
+    <color name="zpink">#f0f</color>
+    <color name="zyellow">#ff0</color>
+
+    <color name="zlima">#df9</color>
+
+    <color name="grey_light">#1f000000</color>
+    <color name="blue_grey_950">#ff21272b</color>
+    <color name="deep_teal_200">#ff80cbc4</color>
+    <color name="deep_teal_500">#ff009688</color>
+    <color name="grey_100">#fff5f5f5</color>
 </resources>

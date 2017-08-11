@@ -3,15 +3,17 @@ package com.example.and_notas.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.and_notas.vo.Note;
-import com.example.and_notas.dao.NoteDao;
 import com.example.and_notas.R;
+import com.example.and_notas.dao.NoteDao;
+import com.example.and_notas.vo.Note;
 
 
 public class EditNoteActivity extends Activity {
@@ -21,9 +23,15 @@ public class EditNoteActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_note);
-
+        /*TEST*//*
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        *//*TEST*/
         final Note note = (Note) getIntent().getSerializableExtra("noteForEdit");
 
         dao = new NoteDao(this);
@@ -37,6 +45,7 @@ public class EditNoteActivity extends Activity {
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(this.getClass().getSimpleName(), "onClick ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
                 //TODO
                 String noteEdited = editNoteText.getEditableText().toString();
 

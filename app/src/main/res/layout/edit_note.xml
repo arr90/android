@@ -3,12 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/ColorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="EDIT NOTE"
+        app:backgroundTint="@color/white"
+        />
 
     <EditText
         android:id="@+id/edit_note_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/ColorPrimaryDark"
         android:inputType="textMultiLine"
         />
 
@@ -17,6 +28,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Edit"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_note_button2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/fab_save"
+        android:layout_gravity="center"
+
+        app:backgroundTint="@color/ColorPrimary"
+        app:borderWidth="0dp"
+        app:pressedTranslationZ="12dp"
         />
 
 </LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_main"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@color/ColorPrimary"
+    android:theme="@style/ToolbarTheme"
+    app:titleTextAppearance="@style/Toolbar.TitleText"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:dividerPadding="8dp"
+        android:orientation="horizontal"
+        android:showDividers="beginning">
+
+        <EditText
+            android:id="@+id/toolbar_text_search"
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="?attr/selectableItemBackground"
+            android:drawableRight="@drawable/places_ic_search"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:hint="@string/search"
+            android:textAllCaps="false"
+            />
+
+    </RelativeLayout>
+</Toolbar>

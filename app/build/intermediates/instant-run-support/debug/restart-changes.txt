@@ -1,2 +1,0 @@
-CHANGED,C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\and_notas\activities\AddNoteActivity.class
-CHANGED,C:\DESENVOLVIMENTO\GITHUB\android\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\and_notas\activities\AddNoteActivity$1.class

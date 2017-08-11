@@ -1,0 +1,19 @@
+# Java class files
+*.class
+
+# Android Studio
+.idea/*
+.gradle
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
+*.iml
+*.iws
+*.ipr
+*~
+*.swp
+
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+.gradle
+/build/
