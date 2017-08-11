@@ -29,10 +29,12 @@ public class MainActivity extends ListActivity {
     protected Object mActionMode;
     public int selectedItem = -1;
 
-    private final String LOG_MAIN_ACTIVITY = MainActivity.class.getSimpleName();
+    private static final String LOG_MAIN_ACTIVITY = MainActivity.class.getSimpleName();
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
+        Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
         super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
@@ -45,6 +47,7 @@ public class MainActivity extends ListActivity {
 
         createFABaddNote();
         createFABopenMap();
+        createFABopenLogin();
         initToolBar();
     }
 
@@ -56,13 +59,13 @@ public class MainActivity extends ListActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-        Log.i(LOG_MAIN_ACTIVITY, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+        Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
 /*
         TextView textView = (TextView) findViewById(R.id.toolbar_text_search);
         textView.setOnClickListener(new TextView.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Log.i(LOG_MAIN_ACTIVITY, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+                Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
                 Toast.makeText(MainActivity.this, "text view clicked", Toast.LENGTH_SHORT).show();
             }
         });
@@ -74,7 +77,7 @@ public class MainActivity extends ListActivity {
         textView.setOnClickListener(new TextView.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Log.i(LOG_MAIN_ACTIVITY, "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+                Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
                 Toast.makeText(MainActivity.this, "text view clicked", Toast.LENGTH_SHORT).show();
             }
         });
@@ -98,6 +101,8 @@ public class MainActivity extends ListActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+        Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
 		if (item.getItemId() == R.id.action_add_note) {
 			Intent intent = new Intent(this, AddNoteActivity.class);
 			startActivity(intent);
@@ -119,10 +124,14 @@ public class MainActivity extends ListActivity {
     }
 
     private void createFABaddNote() {
+        Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.new_note);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
                 Intent intent = new Intent(MainActivity.this, AddNoteActivity.class);
                 startActivity(intent);
                 finish();
@@ -130,10 +139,14 @@ public class MainActivity extends ListActivity {
         });
     }
     private void createFABopenMap() {
+        Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.open_map);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
                 Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(intent);
                 finish();
@@ -141,14 +154,33 @@ public class MainActivity extends ListActivity {
         });
     }
 
+    private void createFABopenLogin() {
+        Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.open_login);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
+                Intent intent = new Intent(MainActivity.this, MaterialDesignLogInFormActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+
     public void initToolBar(){
+        Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
         toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setActionBar(toolbar);
 
         toolbar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Log.i(this.getClass().getSimpleName(), "init ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
+                Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
                 Toast.makeText(MainActivity.this, "clicking the toolbar!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -157,6 +189,8 @@ public class MainActivity extends ListActivity {
         new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(LOG_MAIN_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
                 Toast.makeText(MainActivity.this, "clicking the navigation toolbar!", Toast.LENGTH_SHORT).show();
             }
         });

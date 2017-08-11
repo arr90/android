@@ -56,12 +56,12 @@
 
 	<android.support.design.widget.FloatingActionButton
 		android:id="@+id/open_map"
-		android:layout_width="58dp"
-		android:layout_height="58dp"
-		android:src="@drawable/googleg_standard_color_18"
+		android:layout_width="78dp"
+		android:layout_height="78dp"
+		android:src="@drawable/ic_explore"
 
-		app:backgroundTint="@color/zgreen"
-		app:rippleColor="@color/zlima"
+		app:backgroundTint="@color/ColorPrimaryLight"
+		app:rippleColor="@color/ColorPrimaryDark"
 		app:borderWidth="0dp"
 
 		android:layout_alignParentBottom="true"
@@ -69,6 +69,26 @@
 
 		android:layout_marginRight="24dp"
 		android:layout_marginBottom="98dp"
+
+		android:clickable="true"
+		android:elevation="0dp"
+		/>
+
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/open_login"
+		android:layout_width="78dp"
+		android:layout_height="78dp"
+		android:src="@drawable/googleg_standard_color_18"
+
+		app:backgroundTint="@color/ColorPrimaryLight"
+		app:rippleColor="@color/ColorPrimaryDark"
+		app:borderWidth="0dp"
+
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+
+		android:layout_marginRight="24dp"
+		android:layout_marginBottom="172dp"
 
 		android:clickable="true"
 		android:elevation="0dp"

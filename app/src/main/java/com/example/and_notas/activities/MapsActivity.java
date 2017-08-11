@@ -77,7 +77,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mGoogleApiClient.connect();
 
-        goToMylocation();
+//        goToMylocation();
 
 //        android.location.Location lastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
@@ -172,6 +172,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 setMarker("", latLng);
 //                Toast.makeText(MapsActivity.this, latLng.latitude + ", " + latLng.longitude, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        mMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener() {
+            @Override
+            public boolean onMyLocationButtonClick() {
+                Log.i(LOG_MAPS_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
+                return false;
             }
         });
 
@@ -298,14 +307,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return false;
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        Log.i(LOG_MAPS_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
-
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
     public void onNormalMap(View view) {
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
@@ -323,14 +324,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        Log.i(LOG_MAPS_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
+
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     public void onConnected(@Nullable Bundle bundle) {
         Log.i(LOG_MAPS_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
 
-        mLocationRequest = LocationRequest.create();
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        mLocationRequest.setInterval(2000);
 
-        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+        android.location.Location lastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        goToLocationZoom(new LatLng(lastLocation.getLatitude(),lastLocation.getLongitude()), 15);
+
+        if (LOCATION_IN_REAL_TIME){
+            mLocationRequest = LocationRequest.create();
+            mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+            mLocationRequest.setInterval(2000);
+            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+        }
     }
 
     @Override
@@ -340,6 +354,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (mGoogleApiClient.isConnected()){
             mGoogleApiClient.disconnect();
         }
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        Log.i(LOG_MAPS_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
     }
 
     @Override
@@ -357,8 +376,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        Log.i(LOG_MAPS_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
-    }
 }
