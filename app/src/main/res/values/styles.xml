@@ -5,7 +5,7 @@
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        <item name="android:textColorPrimary">@color/link_text_material_dark</item>
+        <item name="android:textColorPrimary">@color/zacqua</item>
         <item name="android:textColor">#ff0</item>
         <!--
             Theme customizations available in newer API levels can go in
@@ -28,7 +28,7 @@
     <style name="custom_toolbar" parent="@style/Widget.AppCompat.ActionBar">
         <item name="android:background">@color/zlima</item>
         <item name="android:textColorPrimary">#ff0</item>
-        <item name="android:textColor">@color/link_text_material_dark</item>
+        <item name="android:textColor">@color/zacqua</item>
     </style>
 
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -39,7 +39,7 @@
         <!-- Tints the input fields like checkboxes and text fields -->
         <item name="colorAccent">@color/colorAccent</item>
         <!-- Applies to views in their normal state. -->
-        <item name="colorControlNormal">@color/link_text_material_dark</item>
+        <item name="colorControlNormal">@color/zacqua</item>
         <!-- Applies to views in their activated state (i.e checked or switches) -->
         <item name="colorControlActivated">@color/ripple_material_light</item>
         <!-- Applied to framework control highlights (i.e ripples or list selectors) -->

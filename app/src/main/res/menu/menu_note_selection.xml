@@ -15,7 +15,7 @@
 
     <item
         android:id="@+id/ns_delete"
-        android:icon="@drawable/abc_ic_clear_mtrl_alpha"
+        android:icon="@drawable/ic_dialog_close_light"
         android:title="Delete"
     />
 

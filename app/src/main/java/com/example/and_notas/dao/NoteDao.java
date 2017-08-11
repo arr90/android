@@ -11,18 +11,18 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.example.and_notas.CustomSQLiteOpenHelper;
+import com.example.and_notas.sql.NoteSQLiteOpenHelper;
 import com.example.and_notas.vo.Note;
 
 public class NoteDao {
 
 	private static final String LOG_NOTE_LIST_ADAPTER = NoteDao.class.getSimpleName();
 	private SQLiteDatabase database;
-	private String[] columns = { CustomSQLiteOpenHelper.COLUMN_ID, CustomSQLiteOpenHelper.COLUMN_NOTES, CustomSQLiteOpenHelper.COLUMN_CREATE_DATE };
-	private CustomSQLiteOpenHelper sqliteOpenHelper;
+	private String[] columns = { NoteSQLiteOpenHelper.COLUMN_ID, NoteSQLiteOpenHelper.COLUMN_NOTES, NoteSQLiteOpenHelper.COLUMN_CREATE_DATE };
+	private NoteSQLiteOpenHelper sqliteOpenHelper;
 
 	public NoteDao(Context context) {
-		sqliteOpenHelper = new CustomSQLiteOpenHelper(context);
+		sqliteOpenHelper = new NoteSQLiteOpenHelper(context);
 	}
 
 	public void open() throws SQLException {
@@ -35,11 +35,11 @@ public class NoteDao {
 
 	public Note create(String note) {
 		ContentValues values = new ContentValues();
-		values.put(CustomSQLiteOpenHelper.COLUMN_NOTES, note);
-		values.put(CustomSQLiteOpenHelper.COLUMN_CREATE_DATE, new Date().getTime());
+		values.put(NoteSQLiteOpenHelper.COLUMN_NOTES, note);
+		values.put(NoteSQLiteOpenHelper.COLUMN_CREATE_DATE, new Date().getTime());
 
-		long insertId = database.insert(CustomSQLiteOpenHelper.TABLE_NOTES, null, values);
-		Cursor cursor = database.query(CustomSQLiteOpenHelper.TABLE_NOTES, columns, CustomSQLiteOpenHelper.COLUMN_ID + " = " + insertId, null, null, null, null);
+		long insertId = database.insert(NoteSQLiteOpenHelper.TABLE_NOTES, null, values);
+		Cursor cursor = database.query(NoteSQLiteOpenHelper.TABLE_NOTES, columns, NoteSQLiteOpenHelper.COLUMN_ID + " = " + insertId, null, null, null, null);
 		cursor.moveToFirst();
 
 		Note newNote = new Note();
@@ -52,26 +52,26 @@ public class NoteDao {
 	}
 
 	public void delete(Note note) {
-		String where = CustomSQLiteOpenHelper.COLUMN_ID + " = " + note.getId();
-		database.delete(CustomSQLiteOpenHelper.TABLE_NOTES, where, null);
+		String where = NoteSQLiteOpenHelper.COLUMN_ID + " = " + note.getId();
+		database.delete(NoteSQLiteOpenHelper.TABLE_NOTES, where, null);
 		Log.i(LOG_NOTE_LIST_ADAPTER, "DELETE NOTE - id: "+ note.getId() +" ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] LOG **********");
 	}
 
 	public void edit(Note note) {
 		ContentValues values = new ContentValues();
-		String where = CustomSQLiteOpenHelper.COLUMN_ID + " = " + note.getId();
+		String where = NoteSQLiteOpenHelper.COLUMN_ID + " = " + note.getId();
 
-		values.put(CustomSQLiteOpenHelper.COLUMN_NOTES, note.getNote());
-		values.put(CustomSQLiteOpenHelper.COLUMN_CREATE_DATE, note.getCreateDate().getTime());
+		values.put(NoteSQLiteOpenHelper.COLUMN_NOTES, note.getNote());
+		values.put(NoteSQLiteOpenHelper.COLUMN_CREATE_DATE, note.getCreateDate().getTime());
 
-		database.update(CustomSQLiteOpenHelper.TABLE_NOTES, values, where, null);
+		database.update(NoteSQLiteOpenHelper.TABLE_NOTES, values, where, null);
 		database.close();
 	}
 
 	public Note getNote(long idNote) {
 		//TODO
 		Note note = new Note();
-		Cursor cursor = database.query(CustomSQLiteOpenHelper.TABLE_NOTES, columns, null, null, null, null, null);
+		Cursor cursor = database.query(NoteSQLiteOpenHelper.TABLE_NOTES, columns, null, null, null, null, null);
 		cursor.moveToFirst();
 
 		note.setId(cursor.getLong(0));
@@ -84,7 +84,7 @@ public class NoteDao {
 
 	public List<Note> getAll() {
 		List<Note> notes = new ArrayList<Note>();
-		Cursor cursor = database.query(CustomSQLiteOpenHelper.TABLE_NOTES, columns, null, null, null, null, null);
+		Cursor cursor = database.query(NoteSQLiteOpenHelper.TABLE_NOTES, columns, null, null, null, null, null);
 		cursor.moveToFirst();
 		while (!cursor.isAfterLast()) {
 			Note note = new Note();

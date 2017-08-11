@@ -44,6 +44,7 @@ public class MainActivity extends ListActivity {
         setListAdapter(noteItemListAdapter);
 
         createFABaddNote();
+        createFABopenMap();
         initToolBar();
     }
 
@@ -52,7 +53,6 @@ public class MainActivity extends ListActivity {
 		dao.open();
 		super.onResume();
 	}
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -124,6 +124,17 @@ public class MainActivity extends ListActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddNoteActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+    private void createFABopenMap() {
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.open_map);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(intent);
                 finish();
             }

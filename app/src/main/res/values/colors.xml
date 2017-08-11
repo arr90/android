@@ -28,4 +28,10 @@
     <color name="zyellow">#ff0</color>
 
     <color name="zlima">#df9</color>
+
+    <color name="grey_light">#1f000000</color>
+    <color name="blue_grey_950">#ff21272b</color>
+    <color name="deep_teal_200">#ff80cbc4</color>
+    <color name="deep_teal_500">#ff009688</color>
+    <color name="grey_100">#fff5f5f5</color>
 </resources>

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/arthur/GITHUB/android/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/arthur/GITHUB/android/app/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Arthur\development\android\git\notes\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Arthur\development\android\git\notes\app\src\debug\shaders"/></dataSet></merger>

@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:background="?attr/selectableItemBackground"
-            android:drawableRight="@drawable/abc_ic_search_api_mtrl_alpha"
+            android:drawableRight="@drawable/googleg_standard_color_18"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
             android:paddingLeft="16dp"

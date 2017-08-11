@@ -5,25 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity"
-    >
+	>
 
-	<android.support.v7.widget.Toolbar
-		android:id="@+id/toolbar"
+	<include
+		layout="@layout/toolbar_main"
 		android:layout_width="match_parent"
-		android:layout_height="58dp"
-		android:background="@color/ColorPrimary"
-		android:minHeight="?attr/actionBarSize"
-		android:title="@string/app_name"
-	/>
-
+		android:layout_height="wrap_content"
+		/>
 
 	<ListView
 		android:id="@android:id/list"
 		android:paddingTop="58dp"
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
-		android:choiceMode="multipleChoice"
-	 />
+		android:choiceMode="multipleChoiceModal"
+		android:divider="@android:color/transparent"
+		android:dividerHeight="10.0sp"
+		android:listSelector="@drawable/item_selector"
+		/>
 
     <TextView
         android:id="@android:id/empty"
@@ -31,21 +30,48 @@
         android:layout_height="wrap_content"
 		android:paddingTop="58dp"
 		android:text="@string/no_notes"
-	/>
+		android:textSize="10dp"
+		android:fontFamily="serif"
+		/>
 
     <android.support.design.widget.FloatingActionButton
-		android:id="@+id/new_note"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:id="@+id/new_note"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/fab_plus"
+
+        app:backgroundTint="@color/ColorPrimaryLight"
+        app:rippleColor="@color/ColorPrimaryDark"
+        app:borderWidth="0dp"
+
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:src="@drawable/fab_plus"
-        app:backgroundTint="@color/ColorPrimaryDark"
-        app:elevation="16dp"
-        app:borderWidth="8dp"
-        app:fabSize="normal"
-        app:pressedTranslationZ="12dp"
-    />
-	<!--
-    -->
+
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+
+        android:clickable="true"
+        android:elevation="0dp"
+        />
+
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/open_map"
+		android:layout_width="58dp"
+		android:layout_height="58dp"
+		android:src="@drawable/googleg_standard_color_18"
+
+		app:backgroundTint="@color/zgreen"
+		app:rippleColor="@color/zlima"
+		app:borderWidth="0dp"
+
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+
+		android:layout_marginRight="24dp"
+		android:layout_marginBottom="98dp"
+
+		android:clickable="true"
+		android:elevation="0dp"
+		/>
+
 </RelativeLayout>

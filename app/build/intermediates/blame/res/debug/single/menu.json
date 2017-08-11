@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/home/arthur/GITHUB/android/app/build/intermediates/res/merged/debug/menu/menu_edit_note.xml",
-        "source": "/home/arthur/GITHUB/android/app/src/main/res/menu/menu_edit_note.xml"
+        "merged": "C:\\Arthur\\development\\android\\git\\notes\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_note_selection.xml",
+        "source": "C:\\Arthur\\development\\android\\git\\notes\\app\\src\\main\\res\\menu\\menu_note_selection.xml"
     },
     {
-        "merged": "/home/arthur/GITHUB/android/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/home/arthur/GITHUB/android/app/src/main/res/menu/main.xml"
+        "merged": "C:\\Arthur\\development\\android\\git\\notes\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Arthur\\development\\android\\git\\notes\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Arthur\\development\\android\\git\\notes\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_edit_note.xml",
+        "source": "C:\\Arthur\\development\\android\\git\\notes\\app\\src\\main\\res\\menu\\menu_edit_note.xml"
     }
 ]

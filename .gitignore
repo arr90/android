@@ -84,3 +84,7 @@ gen/
 #.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
 .gradle
 build/
+app/src/debug
+app/src/release
+app/build
+.idea/workspace.xml
