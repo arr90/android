@@ -19,19 +19,19 @@
         android:orientation="horizontal"
         android:showDividers="beginning">
 
-        <TextView
+        <EditText
             android:id="@+id/toolbar_text_search"
             style="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:background="?attr/selectableItemBackground"
-            android:drawableRight="@drawable/googleg_standard_color_18"
+            android:drawableRight="@drawable/places_ic_search"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:text="Search"
+            android:hint="@string/search"
             android:textAllCaps="false"
             />
 

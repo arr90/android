@@ -164,6 +164,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onMapClick(LatLng latLng) {
                 Log.i(LOG_MAPS_ACTIVITY, "LOG ["+Thread.currentThread().getStackTrace()[2].getMethodName()+"] {**********}");
 
+                if (marker != null){
+                    marker.remove();
+                }
                 Toast.makeText(MapsActivity.this, latLng.latitude + ", " + latLng.longitude, Toast.LENGTH_SHORT).show();
             }
         });
@@ -191,7 +194,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void changeStyleMap() {
-        MapStyleOptions style = MapStyleOptions.loadRawResourceStyle(this, R.raw.style_map_night);
+        MapStyleOptions style = MapStyleOptions.loadRawResourceStyle(this, R.raw.style_map_dark);
         mMap.setMapStyle(style);
     }
 

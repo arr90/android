@@ -5,11 +5,12 @@
     <string name="add">Add</string>
     <string name="save">Save</string>
     <string name="delete">Delete</string>
+    <string name="search">Search</string>
 
     <string name="no_notes">Empty</string>
     <string name="write_note">Write a note</string>
 
-    <string name="title_activity_main">Notes</string>
+    <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_edit_note">EditNoteActivity</string>
     <string name="title_activity_add_note">AddNoteActivity</string>
 
